@@ -14,6 +14,7 @@ document.getElementById('btn-update')
         //console.log(nameInput);
         const name = nameInput.value;
         //console.log('name is', name);
+        //3. Putting the value to the desired place
         const namePara = document.getElementById('name');
         namePara.innerText = name;
     })
