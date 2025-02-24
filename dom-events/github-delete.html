@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Github Delete</title>
 </head>
+
 <body>
     <h1 id="secret-info">My secret info</h1>
     <input id="input-delete" type="text">
@@ -13,22 +15,23 @@
 
     <script>
         document.getElementById('input-delete')
-        addEventListener('keyup', function (event){
-            const text = event.target.value;
-            const btnDelete = document.getElementById('btn-delete');
-            if(text === 'delete'){
-                btnDelete.removeAttribute('disabled');
-                btnDelete.addEventListener('click', function(){
-                    const secretInfo = document.getElementById('secret-info');
-                    secretInfo.style.display = 'none';
-                })
-            }
-            else{
-                btnDelete.setAttribute('disabled', true);
-            }
- 
-            console.log('User is typing', text);
-        })
+            .addEventListener('keyup', function (event) {
+                const text = event.target.value;
+                const btnDelete = document.getElementById('btn-delete');
+                if (text === 'delete') {
+                    btnDelete.removeAttribute('disabled');
+                    btnDelete.addEventListener('click', function () {
+                        const secretInfo = document.getElementById('secret-info');
+                        secretInfo.style.display = 'none';
+                    })
+                }
+                else {
+                    btnDelete.setAttribute('disabled', true);
+                }
+
+                console.log('User is typing', text);
+            })
     </script>
 </body>
+
 </html>
